@@ -43,6 +43,6 @@ window.MZ_CONFIG = {
   consentEntity: "the developer and its authorised channel partner, Buildnest Realty Pvt Ltd",
 
 
-  siteUrl: "",
+  siteUrl: "https://upcomingnewlaunches.in/",
   privacyUrl: ""
 };
