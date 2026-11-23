@@ -19,7 +19,7 @@ window.MZ_CONFIG = {
   thankYouUrl: "thank-you.html",
 
   /* Google Tag Manager container, e.g. "GTM-XXXXXXX". Loaded only when set. */
-  gtmId: "",
+  gtmId: "GTM-5VRFTRFF", /* informational: the snippet is hard-coded in each page head */
 
   /* Sales / channel-partner number. Call buttons stay hidden until both are set.
    * Example: phoneDisplay "98765 43210", phoneE164 "+919876543210". */
