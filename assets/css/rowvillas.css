@@ -1,0 +1,32 @@
+/* Row villas near Kempegowda Airport: page additions (no logos). */
+.brand-text { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: var(--ink); line-height: 1; }
+.brand-text .bt-1 { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: .34em; margin-right: -.34em; text-transform: uppercase; }
+.brand-text .bt-rule { display: flex; align-items: center; gap: 6px; width: 100%; margin: 5px 0 4px; color: var(--beige); }
+.brand-text .bt-rule::before, .brand-text .bt-rule::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .7; }
+.brand-text .bt-rule svg { flex: none; transform: rotate(45deg); }
+.brand-text .bt-2 { font-size: 9.5px; font-weight: 600; letter-spacing: .26em; margin-right: -.26em; text-transform: uppercase; color: var(--beige); }
+@media (max-width: 480px) { .brand-text .bt-1 { font-size: 16px; letter-spacing: .26em; margin-right: -.26em; } .brand-text .bt-2 { font-size: 8px; letter-spacing: .18em; margin-right: -.18em; } }
+
+.hero-kicker { margin: 0 0 10px; font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: #e7d3ad; }
+.hero-word { margin: 0 0 14px; font-family: var(--serif); font-weight: 600; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.12; color: #fff; }
+.hero-word span { display: block; margin-top: 8px; font-family: var(--sans); font-size: .48em; font-weight: 500; letter-spacing: .04em; color: #e7d3ad; }
+.hero-eoi { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; padding: 8px 16px; border: 1px solid rgba(231,211,173,.7); border-radius: 999px; background: rgba(0,0,0,.28); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: #fff; }
+.hero-eoi i { width: 8px; height: 8px; border-radius: 50%; background: #3fd17a; box-shadow: 0 0 0 3px rgba(63,209,122,.25); }
+.hero > .hero-slide { object-position: 50% 75%; }
+
+.intro-top-nologo { grid-template-columns: 1fr !important; }
+.intro-top-nologo .intro-text { text-align: center; max-width: 860px; margin: 0 auto; }
+
+.about-nologo .about-word { margin: 0 0 12px; font-family: var(--serif); font-size: clamp(24px, 2.4vw, 30px); font-weight: 600; color: var(--ink); }
+.foot-nologo { grid-template-columns: 1fr !important; }
+
+.modal-word { margin: 0 0 12px; font-family: var(--serif); font-size: 26px; font-weight: 600; color: #fff; }
+.loc-gmap { min-height: 360px; }
+.intro-top-nologo::before { display: none !important; }
+.intro-top-nologo .intro-text { grid-column: 1 / -1 !important; justify-self: center; text-align: center; }
+/* single fixed hero image (no carousel) */
+.hero > .hero-slide { animation: none !important; opacity: 1 !important; object-position: 50% 72%; }
+@media (max-width: 899px) { .hero > .hero-slide { object-position: 40% 40%; } }
+.hero-shade { background: linear-gradient(90deg, rgba(14,12,30,.66) 0%, rgba(14,12,30,.42) 34%, rgba(14,12,30,.12) 62%, rgba(14,12,30,0) 100%), linear-gradient(0deg, rgba(10,8,20,.35), transparent 35%) !important; }
+@media (max-width: 899px) { .hero-shade { background: linear-gradient(180deg, rgba(14,12,30,.45) 0%, rgba(14,12,30,.55) 45%, rgba(14,12,30,.7) 100%) !important; } }
+
