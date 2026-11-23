@@ -80,6 +80,19 @@
     ss("ss_attr", JSON.stringify(attribution));
   }
 
+  /* ---------- visitor IP (looked up after the page loads, so it never slows the page or the form) ---------- */
+  var visitorIp = ss("ss_ip") || "";
+  function lookupIp() {
+    if (visitorIp || !window.fetch) return;
+    var c = "AbortController" in window ? new AbortController() : null;
+    var t = setTimeout(function () { if (c) c.abort(); }, 4000);
+    fetch("https://api.ipify.org?format=json", { signal: c ? c.signal : undefined, cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { clearTimeout(t); if (d && d.ip) { visitorIp = String(d.ip).slice(0, 64); ss("ss_ip", visitorIp); } })
+      .catch(function () { clearTimeout(t); });
+  }
+  window.addEventListener("load", function () { (window.requestIdleCallback || function (f) { setTimeout(f, 1200); })(lookupIp); });
+
   /* ---------- state ---------- */
   var pageLoadedAt = Date.now();
   var submitted = ss("ss_lead") === "1" || anyLead(); // already enquired from this browser
@@ -277,7 +290,9 @@
       page_url: location.href.split("#")[0],
       submitted_at: new Date().toISOString()
     };
-    ATTR_KEYS.concat(["landing_page", "referrer"]).forEach(function (k) { if (attribution[k]) payload[k] = attribution[k]; });
+    ATTR_KEYS.forEach(function (k) { payload[k] = attribution[k] || ""; });
+    payload.landing_page = attribution.landing_page || ""; payload.referrer = attribution.referrer || "";
+    payload.ip_address = visitorIp;
 
     btn.disabled = true; sending = true;
     var label = btn.textContent;
