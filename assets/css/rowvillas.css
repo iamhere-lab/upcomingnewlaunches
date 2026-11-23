@@ -30,3 +30,4 @@
 .hero-shade { background: linear-gradient(90deg, rgba(14,12,30,.66) 0%, rgba(14,12,30,.42) 34%, rgba(14,12,30,.12) 62%, rgba(14,12,30,0) 100%), linear-gradient(0deg, rgba(10,8,20,.35), transparent 35%) !important; }
 @media (max-width: 899px) { .hero-shade { background: linear-gradient(180deg, rgba(14,12,30,.45) 0%, rgba(14,12,30,.55) 45%, rgba(14,12,30,.7) 100%) !important; } }
 
+a.btn-outline { text-decoration: none; }

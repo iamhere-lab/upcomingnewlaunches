@@ -8,13 +8,9 @@
 <meta name="description" content="Thanks for your enquiry about the upcoming row villas near Kempegowda Airport. The sales team will call you shortly with the price sheet and floor plans.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="assets/css/rowvillas.css?v=7">
-<script src="assets/js/config.js?v=3"></script>
-<script>
+<link rel="stylesheet" href="assets/css/site.min.css?v=2">
+<script src="assets/js/config.js?v=4" defer></script>
+<script>document.addEventListener("DOMContentLoaded",function(){
   window.dataLayer = window.dataLayer || [];
   // Fire the conversion event only once per real enquiry: the form leaves a one-time lead_id in this tab.
   // A refresh, a bookmark or a direct visit gets "thank_you_revisit" instead, so it can't count as a second lead.
@@ -29,7 +25,7 @@
     if (!id) return;
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',id);
   })(window.MZ_CONFIG && window.MZ_CONFIG.gtmId);
-</script>
+});</script>
 </head>
 <body>
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
@@ -82,7 +78,7 @@
   <button class="lb-nav lb-next" type="button" aria-label="Next image">&#8250;</button>
 </dialog>
 
-<script>
+<script>document.addEventListener("DOMContentLoaded",function(){
 (function () {
   var CFG = window.MZ_CONFIG || {};
   if (CFG.phoneE164) document.querySelectorAll(".js-phone").forEach(function (a) { a.href = "tel:" + CFG.phoneE164; a.hidden = false; });
@@ -100,6 +96,6 @@
   lb.addEventListener("click", function (e) { if (e.target === lb || e.target.closest("[data-close]")) lb.close(); });
   lb.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") show(i + 1); if (e.key === "ArrowLeft") show(i - 1); });
 })();
-</script>
+});</script>
 </body>
 </html>
