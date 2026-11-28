@@ -726,3 +726,5 @@ h1 em, .display em, .intro-text em { font-style: normal; }
 /* header phone pill stays on one line */
 .phone-pill { white-space: nowrap; flex: none; }
 @media (min-width: 900px) and (max-width: 1439px) { .phone-pill { font-size: 14.5px; padding: 0 14px; gap: 8px; } .site-nav { gap: 18px; } }
+
+.consent-note { display: block; min-height: 0; margin: 0; font-size: 11.5px; }
